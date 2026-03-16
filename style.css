@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b5ed7;
+    color: #fff;
+}
+
+/* MENU */
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0b5ed7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    z-index: 1000;
+}
+
+.nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+.btn-whatsapp {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-whatsapp img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0b5ed7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    z-index: 1000;
+
+    animation: menuDescer 1s ease;
+}
+
+@keyframes menuDescer {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* INICIO */
+
+.inicio {
+    background: #fff;
+    color: #001f3f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 80px;
+}
+
+.carrossel {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    /* opcional para fundo */
+}
+
+.slide {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: 1s;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.texto-inicio {
+    animation: descerTexto 1.5s ease;
+}
+
+@keyframes descerTexto {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.carrossel {
+    animation: entrarCarrossel 1.5s ease;
+}
+
+@keyframes entrarCarrossel {
+
+    0% {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* SOBRE */
+
+.sobre {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo-sobre {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+}
+
+.conteudo-sobre {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease;
+}
+
+.conteudo-sobre.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* SERVIÇOS */
+
+.servicos {
+    background: #fff;
+    color: #06014d;
+    ;
+    padding: 100px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.411);
+    padding: 40px;
+    width: 22%;
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+}
+
+.card img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.btn-servicos {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* CARDS SERVIÇOS */
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    width: 22%;
+    backdrop-filter: blur(10px);
+
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: all 0.8s ease;
+}
+
+.card.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* BOTÃO */
+
+.btn-servicos {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer;
+
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease;
+}
+
+.btn-servicos.subir {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* CONTATO */
+
+.contato {
+    padding: 100px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+}
+
+input,
+textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    padding: 12px;
+    cursor: pointer;
+}
+
+
+/* MENSAGEM */
+
+.mensagem {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 40px;
+    display: none;
+}
+
+#fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #001f3f;
+    color: white;
+    padding: 40px;
+}
+
+.footer-contato {
+    display: flex;
+    justify-content: space-between;
+}
+
+.redes a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    transform: scale(1.1);
+}
+
+.redes img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.direitos {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.direitos a {
+    color: white;
+    text-decoration: none;
+}
+
+.direitos a:hover {
+    color: yellow;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-container::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.logo-container img {
+    position: relative;
+    z-index: 1;
+    height: 220px;
+}
+
+@media (max-width: 1024px) {
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .carrossel {
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .menu {
+        padding: 15px 20px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inicio {
+        padding: 120px 20px;
+        padding-top: 250px;
+    }
+
+    .texto-inicio {
+        text-align: center;
+    }
+
+    .carrossel {
+        width: 100%;
+        height: 220px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .btn-servicos {
+        font-size: 16px;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .footer-contato {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .logo-footer img {
+        height: 50px;
+    }
+
+    .redes {
+        text-align: center;
+    }
+
+}
